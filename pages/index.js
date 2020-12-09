@@ -11,8 +11,8 @@ export default function Home() {
 
   let login = () => {
     netlifyAuth.authenticate((user) => {
-      setLoggedIn(!!user)
       setUser(user)
+      setLoggedIn(!!user)
       netlifyAuth.closeModal()
     })
   }
